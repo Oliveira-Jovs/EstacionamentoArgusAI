@@ -1,0 +1,232 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('../img/bg.jpg');
+    background-size: cover;
+    background-position: top;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container-home1 {
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 22px;
+    box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.35);
+    padding: 1.8rem;
+    max-width: 1100px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+}
+
+.container-home2 {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.35);
+    padding: 2rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+}
+
+.text-content {
+    max-width: 600px;
+    color: #333;
+    text-align: left;
+}
+
+.text-content h1 {
+    font-size: 2.5rem;
+    background: linear-gradient(20deg, #2c3e50e0, #2c3e50c2);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 800;
+    margin-bottom: 1.2rem;
+}
+
+.text-content p {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.btn-container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn-home {
+    padding: 0.8rem 1.6rem;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    flex: 1;
+}
+
+.btn-login {
+    background-color: #2c3e50e0;
+    color: #fff;
+    border: none;
+}
+
+.btn-login:hover {
+    background-color: #2c3e50e0;
+    transform: scale(1.05);
+    color: #fff;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.btn-register {
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    border: none;
+}
+
+.btn-register:hover {
+    background-color: #bdc3c7;
+    color: #2c3e50;
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.illustration img {
+    max-width: 420px;
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.4s ease;
+}
+
+.illustration:hover img {
+    transform: scale(1.05);
+}
+
+/* Decorações */
+.circle-decor1, .circle-decor2, .circle-decor3 {
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    background-color: rgba(137, 196, 249, 0.5);
+    border-radius: 50%;
+    z-index: -1;
+    animation: float 8s ease-in-out infinite;
+}
+
+.circle-decor1 {
+    top: -80px;
+    right: -80px;
+}
+
+.circle-decor2 {
+    top: 700px;
+    right: 250px;
+}
+
+.circle-decor3 {
+    top: -50px;
+    right: 1750px;
+}
+
+.circle-decor4, .circle-decor5, .circle-decor6 {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.circle-decor4 {
+    margin-top: 30px;
+    margin-left: 15px;
+    background-color: #517ea8;
+}
+
+.circle-decor5 {
+    margin-top: 30px;
+    margin-left: 30px;
+    background-color: #6285a5;
+}
+
+.circle-decor6 {
+    margin-top: 30px;
+    margin-left: 45px;
+    background-color: #98b6cb;
+}
+
+.line-decor {
+    position: absolute;
+    bottom: 30px;
+    left: -50px;
+    width: 150px;
+    height: 10px;
+    background-color: #89c4f9;
+    border-radius: 5px;
+    transform: rotate(45deg);
+    z-index: -1;
+}
+
+/* Animação */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container-home1 {
+        padding: 1rem;
+    }
+
+    .container-home2 {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+    }
+
+    .text-content h1 {
+        font-size: 2rem;
+    }
+
+    .text-content p {
+        font-size: 1rem;
+    }
+
+    .btn-container {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .btn-home {
+        width: 100%;
+    }
+
+    .illustration {
+        margin-top: 1.5rem;
+    }
+
+    .circle-decor1, .circle-decor2, .circle-decor3 {
+        width: 160px;
+        height: 160px;
+    }
+
+    .line-decor {
+        width: 80px;
+        height: 6px;
+        bottom: 10px;
+        left: -20px;
+    }
+}
