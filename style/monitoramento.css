@@ -1,31 +1,91 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('../img/bg.jpg'); 
+    background-size: cover;
+    background-position: bottom;
+    margin: 0;
+    padding: 0;
 }
 
 .navbar {
-    margin-bottom: 20px;
+    background: linear-gradient(90deg, #2c3e50, #34495e);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+    color: #fff !important;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #bdc3c7 !important;
+}
+
+.container {
+    padding: 20px;
 }
 
 .card {
     border: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+    padding: 20px;
+    text-align: center;
 }
 
 .card-title {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: bold;
+    margin-bottom: 15px;
+    color: #2c3e50;
 }
 
 .card-text {
-    font-size: 1.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #34495e;
+}
+
+.bg-primary {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+}
+
+.bg-success {
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+}
+
+.bg-danger {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
 }
 
 .img-fluid {
     border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.img-fluid:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 766px) {
+    .col-md-4 {
+        margin-bottom: 10px;
+    }
 }
