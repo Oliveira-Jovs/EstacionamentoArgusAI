@@ -63,29 +63,71 @@ body {
     color: #34495e;
 }
 
-.bg-primary {
-    background: linear-gradient(135deg, #3498db, #2980b9);
-}
-
 .bg-success {
     background: linear-gradient(135deg, #2ecc71, #27ae60);
 }
 
-.bg-danger {
+/* Estilo dos Botões de Controle da Cancela */
+.controle-cancela {
+    position: absolute;
+    padding: 25px;
+    background-color: #ffffffb0;
+    margin-top: 20px;
+    border-radius: 12px;
+    top: 70px; 
+    right: 20px;
+    z-index: 1000;
+    text-align: right;
+}
+
+.btn-cancela {
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.btn-cancela:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+#abrirCancelaBtn {
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+}
+
+#fecharCancelaBtn {
     background: linear-gradient(135deg, #e74c3c, #c0392b);
 }
 
-.img-fluid {
+.status-cancela {
+    font-weight: bold;
+    padding: 10px;
     border-radius: 8px;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
 }
 
-.img-fluid:hover {
-    transform: scale(1.05);
+.status-aberta {
+    color: #27ae60;
+    background-color: rgba(46, 204, 113, 0.1);
 }
 
-@media (max-width: 766px) {
+.status-fechada {
+    color: #e74c3c;
+    background-color: rgba(231, 76, 60, 0.1);
+}
+
+@media (max-width: 767px) {
     .col-md-4 {
-        margin-bottom: 10px;
+        margin-top: 230px;
+    }
+    .controle-cancela {
+        margin-left: 15px;
     }
 }
